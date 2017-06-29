@@ -6,9 +6,6 @@ import os.path
 xmlFileName = ''
 outFileName = 'result.html'
 
-def isFileExist(path):
-    return os.path.isfile(path)
-
 def printUsage():
     print 'Usage(1): ./HTMLGenerator.py [xml_file]'
     print 'output file is result.html'
@@ -23,6 +20,9 @@ if len(sys.argv) == 2:
     else:
         printUsage()
 elif len(sys.argv) == 4:
+    if os.path.isfile(sys.argv[1]):
+        xmlFileName = sys.argv[1]
+        else:
     xmlFileName = sys.argv[1]
     outFileName = sys.argv[3]
 else:
