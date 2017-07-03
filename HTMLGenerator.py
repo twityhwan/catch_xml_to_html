@@ -22,7 +22,8 @@ if len(sys.argv) == 2:
 elif len(sys.argv) == 4:
     if os.path.isfile(sys.argv[1]):
         xmlFileName = sys.argv[1]
-        else:
+    else:
+        printUsage()
     xmlFileName = sys.argv[1]
     outFileName = sys.argv[3]
 else:
